@@ -5,7 +5,7 @@
 }
 
 html, body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
@@ -18,7 +18,7 @@ html, body {
 
 header {
     background: linear-gradient(to bottom, #efefef, #dcdcdc);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,7 +77,9 @@ nav a {
 .intro h1{
     font-size: 80px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-family: 'Roboto-Black', sans-serif;
+    font-weight: 900;
 }
 
 .intro img{
@@ -99,6 +101,98 @@ nav a {
     max-width: 600px;
 }
 
+.carousel{
+    margin: 10px auto;
+    width: 90%;
+    /*border: 5px solid red;*/
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel h1{
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 30s infinite linear;
+    padding-right: 1em;
+}
+
+@keyframes spin{
+    from{translate: 0;}
+    to{translate: -100%;}
+}
+
+.card{
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    font-size: 24px;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+
+.personal-projects h1{
+    color: #1e1e1e;
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-family:'Roboto', sans-serif;
+    font-style: 900;
+}
+
+.solar-projects{
+    height: 550px;
+    position: relative;
+    background-color: #002145;
+}
+
+.solar-projects::before{
+    background-image: url("images/Solar-car.png");
+    background-size: cover;
+    content:'';
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+}
+
+.solar-projects h1{
+    position: absolute;
+    isolation: isolate;
+    color: #ffffff;
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-family:'Roboto', sans-serif;
+    font-style: 900;
+}
+
+.white-box-section{
+    background-color:#dcdcdc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 550px;
+}
+
+.spacer{
+    background-color:#1e1e1e;
+    height: 100px;
+}
+
 .project-card {
     background: #1e1e1e;
     padding: 15px;
@@ -112,7 +206,8 @@ nav a {
     padding: 20px 60px;
     display: inline-block;
     font-weight: bold;
-    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;  
     text-align: center;
     border-radius:50px;
     transition: 0.3s ease-in-out;
@@ -124,7 +219,7 @@ nav a {
 }
 
 footer {
-    background: #1e1e1e;
+    background: #000000;
     padding: 10px;
     margin-top: auto; /* This ensures it stays at the bottom */
 }
