@@ -111,6 +111,7 @@ nav a {
 }
 
 .carousel-title h1{
+    color: #1B263B;
     font-size: 70px;
     text-align: center;
     margin-top: 12px;
@@ -162,12 +163,52 @@ nav a {
     align-content: center;
 }
 
+.image-spacer{
+    background-color: #1B263B;
+}
+
+.image-spacer img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+
+    animation: image-spacer-animation-exit forwards;
+    animation-timeline: view();
+    animation-range: exit;
+}
+
+@keyframes image-spacer-animation-entry{
+    25%{ opacity: 0.3;}
+    100%{opacity: 1;}
+}
+
+@keyframes image-spacer-animation-exit{
+    85%, 100%{opacity: 0; scale: 1.5}
+}
+
+/*.scroll-watcher{
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: lime;
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher{
+    to{scale:11;}
+}*/
+
+
+
 .personal-projects h1{
-    color: #1e1e1e;
+    color: #778DA9;
     font-size: 50px;
     margin-top: 25px;
     margin-bottom: 5px;
-    font-family:'Roboto', sans-serif;
     font-style: 900;
 }
 
@@ -373,7 +414,7 @@ nav a {
 }
 
 .solar-projects::before{
-    background-image: url("images/Solar-car.png");
+    /*background-image: url("images/Solar-car.png");*/
     background-size: cover;
     content:'';
     position: absolute;
@@ -384,26 +425,24 @@ nav a {
 .solar-projects h1{
     position: absolute;
     isolation: isolate;
-    color: #ffffff;
+    color: #778DA9;
     font-size: 50px;
     margin-top: 25px;
     margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
     width: 100%;
-    font-family:'Roboto', sans-serif;
     font-style: 900;
 }
 
 .white-box-section{
-    background-color:#dcdcdc;
+    background-color:#1B263B;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     height: 550px;
 }
 
 .spacer{
-    background-color:#1e1e1e;
+    background-color:#E0E1DD;
     height: 100px;
 }
 
@@ -416,7 +455,7 @@ nav a {
 
 .btn-custom {
     background-color: var(--text-color);
-    color: var(--bg-color);
+    color: #1B263B;
     padding: 20px 60px;
     display: inline-block;
     font-weight: bold;
@@ -433,7 +472,7 @@ nav a {
 }
 
 footer {
-    background: #000000;
+    background: #1B263B;
     padding: 10px;
     margin-top: auto; /* This ensures it stays at the bottom */
 }
