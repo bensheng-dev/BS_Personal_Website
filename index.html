@@ -7,6 +7,7 @@
     <!-- Link to your CSS file here if you have one -->
     <link rel="stylesheet" href="styles.css">
     <script src="carousel.js"></script>
+    <script src="projects-carousel.js"></script>
 </head>
 <body>
     <header>
@@ -64,8 +65,37 @@
         <section class = "personal-projects">
             <div class = "white-box-section">
                 <h1>Personal Projects</h1>
-                <div class="carousel">
-
+                <div class="projects-carousel-container">
+                    <button class="carousel-nav-btn carousel-prev" aria-label="Previous project">‹</button>
+                    <div class="projects-carousel">
+                        <div class="project-card active">
+                            <img src="images/SimRigCover.png" alt="Project 1" class="project-image">
+                            <div class="project-info">
+                                <p>Description of your first project</p>
+                                <a href="projects.html" class="project-link-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/WindTunnelCover.jpg" alt="Project 2" class="project-image">
+                            <div class="project-info">
+                                <p>Description of your second project</p>
+                                <a href="projects.html" class="project-link-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/Solar-car.png" alt="Project 3" class="project-image">
+                            <div class="project-info">
+                                <p>Description of your third project</p>
+                                <a href="projects.html" class="project-link-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-nav-btn carousel-next" aria-label="Next project">›</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
                 </div>
             </div>
         </section>

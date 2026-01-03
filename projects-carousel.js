@@ -16,9 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Calculate relative position
             let diff = index - currentSlide;
             
-            // Handle wrap-around
-            if (diff > 1) diff = diff - totalSlides;
-            if (diff < -1) diff = diff + totalSlides;
+            // Handle wrap-around for 3-item carousel
+            // Normalize diff to be between -1 and 1 for adjacent cards
+            if (diff > 1) {
+                diff = diff - totalSlides; // Wrap from right to left
+            } else if (diff < -1) {
+                diff = diff + totalSlides; // Wrap from left to right
+            }
             
             // Reset and position cards
             card.style.opacity = '';
@@ -32,22 +36,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.style.transform = 'translateX(-50%) scale(1)';
                 card.style.zIndex = '3';
                 card.style.opacity = '1';
-            } else if (diff === -1 || diff === 2) {
-                // Left side card
+            } else if (diff === -1) {
+                // Left side card (previous)
                 card.style.left = '10%';
                 card.style.right = 'auto';
                 card.style.transform = 'scale(0.85)';
                 card.style.zIndex = '1';
                 card.style.opacity = '0.6';
-            } else if (diff === 1 || diff === -2) {
-                // Right side card
+            } else if (diff === 1) {
+                // Right side card (next)
                 card.style.left = 'auto';
                 card.style.right = '10%';
                 card.style.transform = 'scale(0.85)';
                 card.style.zIndex = '1';
                 card.style.opacity = '0.6';
             } else {
-                // Hidden
+                // Hidden (shouldn't happen with 3 items, but just in case)
                 card.style.opacity = '0';
                 card.style.pointerEvents = 'none';
             }
