@@ -474,7 +474,7 @@ nav a {
 .project-card {
     flex: 0 0 550px;
     background: #E0E1DD;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.4s ease;
@@ -482,7 +482,7 @@ nav a {
     transform: scale(0.85);
     position: absolute;
     cursor: pointer;
-    width: 550px;
+    width: 650px;
     height: 500px;
 }
 
@@ -564,6 +564,16 @@ nav a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.carousel-nav-btn * {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .carousel-nav-btn:hover {
@@ -581,7 +591,7 @@ nav a {
 
 .carousel-dots {
     position: absolute;
-    bottom: -40px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -651,13 +661,6 @@ footer {
 .image-container-column img {
   width: 850px; /* or any size you want */
   height: auto;
-}
-
-.project-image {
-    width: 400px; /* Set same size for both images */
-    height: 400px; /* Ensures consistent height */
-    object-fit: cover; /* Keeps images from stretching */
-    border-radius: 15px; /* Adds rounded corners */
 }
 
 .product-details .video-container video {
