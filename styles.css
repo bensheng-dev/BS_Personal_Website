@@ -108,6 +108,8 @@ nav a {
     height: 100px;
     margin-top: 5px;
     position: absolute;
+    margin-left: 200px;
+    /*border: 5px solid red;*/
 }
 
 .carousel-title h1{
@@ -119,10 +121,10 @@ nav a {
 
 .carousel-skills{
     margin: 10px auto;
-    width: 75%;
+    width: 65%;
     /*border: 5px solid red;*/
     display: flex;
-    margin-left: 235px;
+    margin-left: 375px;
     margin-bottom: 40px;
     overflow-x: hidden;
 }
@@ -609,4 +611,3 @@ code{
         margin: 10px auto;
     }
 }
-
