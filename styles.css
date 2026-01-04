@@ -48,8 +48,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    padding: 35px;
+    padding: 15px 35px;
     font-size: large;
 }
 
@@ -61,7 +60,7 @@ nav a {
     color: var(--accent-color);
     text-decoration: none;
     margin: 0 20px;
-    font-size: 24px;
+    font-size: 25px;
 }
 
 .hero, .projects{
@@ -90,8 +89,8 @@ nav a {
 }
 
 .intro { 
-    margin: 20px auto;
-    padding-top: 30px;
+    margin: 10px auto;
+    padding-top: 10px;
     padding-bottom: 10px;
     max-width: 1100px;
     display: flex;
@@ -104,7 +103,7 @@ nav a {
     color: #1B263B;
     font-size: 80px;
     margin-top: 5px;
-    margin-bottom: -5px;
+    margin-bottom: 0px;
     font-family: 'Georgia', sans-serif;
     font-weight: 900;
     height: 100px;
@@ -143,11 +142,12 @@ nav a {
 
 .intro subheader {
     font-family: 'Georgia', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     display: block;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 10px;
     color: #1B263B;
+    font-weight: 600;
 }
 
 .carousel-title{
@@ -261,7 +261,7 @@ nav a {
     font-size: 60px;
     font-family: 'Overpass Heavy', sans-serif;
     margin-top: 25px;
-    margin-bottom: -25px;
+    margin-bottom: -75px;
 }
 
 .ax-hidden {
@@ -460,7 +460,7 @@ nav a {
 }
 
 .solar-projects{
-    min-height: 650px;
+    min-height: 300px;
     height: auto;
     position: relative;
     background-color: #1B263B;
@@ -485,7 +485,7 @@ nav a {
     color: #778DA9;
     font-size: 60px;
     margin-top: 25px;
-    margin-bottom: -25px;
+    margin-bottom: -75px;
     text-align: center;
     width: 100%;
     font-style: 900;
@@ -497,7 +497,7 @@ nav a {
     background-color:#1B263B;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    min-height: 650px;
+    min-height: 450px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -684,12 +684,13 @@ nav a {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: -75px;
 }
 
 .dot.active {
@@ -718,9 +719,8 @@ nav a {
 }
 
 .btn-custom {
-    background-color: var(--text-color);
-    /*color: #1B263B;*/
-    background: linear-gradient(to bottom, #778DA9, #E0E1DD);
+    /*background-color: var(--text-color);*/
+    color: #1B263B;
     padding: 20px 60px;
     display: inline-block;
     font-weight: bold;
@@ -729,6 +729,7 @@ nav a {
     text-align: center;
     border-radius:50px;
     transition: 0.3s ease-in-out;
+    font-size: 25px;
 }
 
 .btn-custom:hover {
