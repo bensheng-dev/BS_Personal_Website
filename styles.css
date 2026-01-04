@@ -1,11 +1,37 @@
+@font-face {
+    font-family: 'Futura Light';
+    src: url('fonts/Futura-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Overpass Heavy';
+    src: url('fonts/overpassheavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Overpass Heavy';
+    src: url('fonts/overpassheavyitalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
     --bg-color: #E0E1DD;
     --text-color: #e0e0e0;
     --accent-color: #000000;
+    --futura-light: 'Futura Light', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --overpass-heavy: 'Overpass Heavy', 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html, body {
-    font-family: 'PlayFair' , Times, serif;
+    font-family: 'Futura Light', sans-serif;
     background-color: var(--bg-color);
     color: #415A77;
     margin: 0;
@@ -18,7 +44,7 @@ html, body {
 
 header {
     background: linear-gradient(to bottom, #778DA9, #E0E1DD);
-    font-family: 'Soria' sans-serif;
+    font-family: 'Futura Light', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,8 +104,11 @@ nav a {
     color: #1B263B;
     font-size: 80px;
     margin-top: 5px;
-    margin-bottom: 5px;
-    font-family: 'Roboto-Black', sans-serif;
+    margin-bottom: -5px;
+    font-family: 'Georgia', sans-serif;
+    font-weight: 900;
+    height: 100px;
+    line-height: 1.25;
 }
 
 .intro img{
@@ -99,6 +128,8 @@ nav a {
     line-height: 1.6; /* Improves readability */
     text-align: left;
     max-width: 600px;
+    font-family: 'Futura Light', sans-serif;
+    margin-top: 0;
 }
 
 .carousel-title{
@@ -108,23 +139,24 @@ nav a {
     height: 100px;
     margin-top: 5px;
     position: absolute;
-    margin-left: 200px;
+    margin-left: 7.5%
     /*border: 5px solid red;*/
 }
 
 .carousel-title h1{
     color: #1B263B;
-    font-size: 70px;
+    font-size: 60px;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 20px;
+    font-family: 'Georgia', sans-serif;
 }
 
 .carousel-skills{
     margin: 10px auto;
-    width: 65%;
+    width: 67.5%;
     /*border: 5px solid red;*/
     display: flex;
-    margin-left: 375px;
+    margin-left: 23%;
     margin-bottom: 40px;
     overflow-x: hidden;
 }
@@ -410,9 +442,14 @@ nav a {
 }
 
 .solar-projects{
-    height: 550px;
+    min-height: 650px;
+    height: auto;
     position: relative;
-    background-color: #002145;
+    background-color: #1B263B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .solar-projects::before{
@@ -425,22 +462,23 @@ nav a {
 }
 
 .solar-projects h1{
-    position: absolute;
+    position: relative;
     isolation: isolate;
     color: #778DA9;
     font-size: 50px;
     margin-top: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     text-align: center;
     width: 100%;
     font-style: 900;
+    z-index: 1;
 }
 
 .white-box-section{
     background-color:#1B263B;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    min-height: 600px;
+    min-height: 650px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -464,18 +502,18 @@ nav a {
     justify-content: center;
     gap: 30px;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
-    height: 550px;
+    height: 600px;
     padding: 0 100px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .project-card {
     flex: 0 0 550px;
     background: #E0E1DD;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.4s ease;
     opacity: 0.6;
@@ -486,11 +524,24 @@ nav a {
     height: 500px;
 }
 
+.project-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 0 0 5px 5px;
+}
+
 .project-card.active {
     opacity: 1;
     transform: scale(1);
     z-index: 3;
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
 .project-image {
@@ -499,13 +550,16 @@ nav a {
     object-fit: cover;
     display: block;
     position: absolute;
+    border-radius: 5px;
     top: 0;
     left: 0;
     z-index: 1;
+    opacity: 0.9;
 }
 
 .project-info {
     padding: 20px;
+    padding-bottom: 40px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -528,22 +582,33 @@ nav a {
 }
 
 .project-link-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #778DA9;
     color: white;
-    padding: 12px 30px;
+    padding: 10px 30px;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 5px;
+    height: auto;
+    min-height: 44px;
+    vertical-align: middle;
     font-weight: bold;
     transition: all 0.3s ease;
     font-size: 16px;
     flex-shrink: 0;
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    line-height: 1.2;
+    z-index: 3;
+    width: 80%;
 }
 
 .project-link-btn:hover {
     background-color: #1B263B;
-    transform: translateY(-2px);
+    transform: translate(-50%, calc(50% - 2px));
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -564,15 +629,10 @@ nav a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    line-height: 1;
+    line-height: 50px;
     padding: 0;
     margin: 0;
     text-align: center;
-}
-
-.carousel-nav-btn * {
-    line-height: 1;
-    display: inline-block;
     vertical-align: middle;
 }
 
@@ -621,11 +681,12 @@ nav a {
 
 .btn-custom {
     background-color: var(--text-color);
-    color: #1B263B;
+    /*color: #1B263B;*/
+    background: linear-gradient(to bottom, #778DA9, #E0E1DD);
     padding: 20px 60px;
     display: inline-block;
     font-weight: bold;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Futura Light', sans-serif;
     text-decoration: none;  
     text-align: center;
     border-radius:50px;
