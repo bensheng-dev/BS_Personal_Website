@@ -130,6 +130,24 @@ nav a {
     max-width: 600px;
     font-family: 'Futura Light', sans-serif;
     margin-top: 0;
+    margin-bottom: 0.3em;
+}
+
+.intro subheader + p {
+    margin-top: 5px;
+}
+
+.intro .container p + p {
+    margin-top: 2px;
+}
+
+.intro subheader {
+    font-family: 'Georgia', sans-serif;
+    font-size: 40px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1B263B;
 }
 
 .carousel-title{
@@ -240,10 +258,10 @@ nav a {
 
 .personal-projects h1{
     color: #778DA9;
-    font-size: 50px;
+    font-size: 60px;
+    font-family: 'Overpass Heavy', sans-serif;
     margin-top: 25px;
-    margin-bottom: 5px;
-    font-style: 900;
+    margin-bottom: -25px;
 }
 
 .ax-hidden {
@@ -465,13 +483,14 @@ nav a {
     position: relative;
     isolation: isolate;
     color: #778DA9;
-    font-size: 50px;
+    font-size: 60px;
     margin-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: -25px;
     text-align: center;
     width: 100%;
     font-style: 900;
     z-index: 1;
+    font-family: 'Overpass Heavy', sans-serif;
 }
 
 .white-box-section{
@@ -521,7 +540,12 @@ nav a {
     position: absolute;
     cursor: pointer;
     width: 650px;
-    height: 500px;
+    height: 400px;
+}
+
+.project-card a{
+    font-family: 'Futura Light', sans-serif;
+    font-size: 25px;
 }
 
 .project-card::before {
@@ -676,7 +700,21 @@ nav a {
 
 .spacer{
     background-color:#E0E1DD;
-    height: 100px;
+    min-height: 150px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.spacer img {
+    width: 100%;
+    height: 150px;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.5;
 }
 
 .btn-custom {
@@ -702,6 +740,12 @@ footer {
     background: #1B263B;
     padding: 10px;
     margin-top: auto; /* This ensures it stays at the bottom */
+}
+
+footer p{
+    font-family: 'Futura Light', sans-serif;
+    font-size: 15px;
+    color:#e0e0e0;
 }
 
 .image-container-row{
@@ -791,6 +835,12 @@ code{
     .intro p {
         max-width: 95%;
         text-align: center;
+    }
+
+    .intro subheader{
+        font-family: 'Georgia', sans-serif;
+        font-size: 30px;
+        font-weight: 900px;
     }
 
     .project-details {
