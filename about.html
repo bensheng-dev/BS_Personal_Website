@@ -6,12 +6,19 @@
     <title>Benjamin Sheng Portfolio</title>
     <!-- Link to your CSS file here if you have one -->
     <link rel="stylesheet" href="styles.css">
+    <script src="carousel.js"></script>
+    <script src="projects-carousel.js"></script>
+    <script src="menu.js"></script>
 </head>
-
 <body>
     <header>
         <a class="btn-custom" href = "index.html">Benjamin Sheng</a>
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="blogs.html">Aero Blog</a>
@@ -20,8 +27,69 @@
     </header>
 
     <main>
+
+        <section class = "intro float-image">
+            <img src="images/IMG_9672.JPG" alt="intro image">
+            <div class="container">
+                <h1>About Me</h1>
+                <p>My name is Benjamin Sheng. I am a high school senior attending Crescent School in North York, Toronto.
+
+ 
+
+                    My dream is to become an aerodynamicist working in Formula One. My idol is Adrian Newey, regarded as the greatest F1 aerodynamicist ever. I look to replicate his success. His autobiography inspired me, detailing everything he's learned over his lengthy career. 
+                    
+                     
+                    
+                    This has made me incredibly passionate about engineering, specifically aerospace engineering. I constantly strive to further my understanding of this 
+                    
+                    complicated field of science. One of my favorite hobbies is analyzing each team's upgrades for a certain weekend. This allows me to stay fresh and continue learning in an ever-evolving sport. 
+                    
+                    ​
+                    
+                    Outside of engineering, I love Basketball and have played competitively since grade 3. In addition to Basketball, I enjoy playing volleyball and ultimate frisbee. I run the F1 Fan Forum at my school, which is a club of 60+ fans that get together to watch races, compete in sim races, and play fantasy leagues. As a hobby, I also follow Aviation, MotoGP, and IndyCar.</p>
+
+                <!--<subheader>Certifications:</subheader>
+                <p>CSWA - Certified SolidWorks Associate</p>
+                <p>Driver61 Aerodynamics Certification</p>-->
+            </div>
+        </section>
+
+        <div class = "carousel-title">
+            <h1>Skills</h1>
+        </div>
+
+        <div class = "carousel-skills">
+            <div class = "group-skills">
+                <div class = "card-skills">CAD</div>
+                <div class = "card-skills">Solidworks Surfacing</div>
+                <div class = "card-skills">Fusion 360</div>
+                <div class = "card-skills">3D Printing</div>
+                <div class = "card-skills">Java</div>
+                <div class = "card-skills">Python</div>
+                <div class = "card-skills">C++</div>
+                <div class = "card-skills">C</div>
+                <div class = "card-skills">Arduino</div>
+                <div class = "card-skills">HTML</div>
+            </div>
+            <div aria-hidden class = "group-skills">
+                <div class = "card-skills">CAD</div>
+                <div class = "card-skills">Solidworks Surfacing</div>
+                <div class = "card-skills">Fusion 360</div>
+                <div class = "card-skills">3D Printing</div>
+                <div class = "card-skills">Java</div>
+                <div class = "card-skills">Python</div>
+                <div class = "card-skills">C++</div>
+                <div class = "card-skills">C</div>
+                <div class = "card-skills">Arduino</div>
+                <div class = "card-skills">HTML</div>
+            </div>
+        </div>
        
     </main>
+
+    <footer>
+        <p>Benjamin Sheng</p>
+    </footer>
 </body>
 
 </html>

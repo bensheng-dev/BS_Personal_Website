@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="styles.css">
     <script src="carousel.js"></script>
     <script src="projects-carousel.js"></script>
+    <script src="menu.js"></script>
 </head>
 <body>
     <header>
         <a class="btn-custom" href = "index.html">Benjamin Sheng</a>
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="blogs.html">Aero Blog</a>
@@ -26,6 +32,10 @@
             <div class="container">
                 <h1>Hello!</h1>
                 <p>My name is Benjamin Sheng. I am a first year engineering student attending the University of British Columbia. My dream is to become an aerodynamicist working in Formula One. I am incredibly passionate about engineering, specifically aerospace engineering. This website demonstrates how I utilize my current knowledge, which is ever-evolving. Please enjoy!</p>
+
+                <!--<subheader>Certifications:</subheader>
+                <p>CSWA - Certified SolidWorks Associate</p>
+                <p>Driver61 Aerodynamics Certification</p>-->
             </div>
         </section>
 
@@ -38,7 +48,7 @@
                 <div class = "card-skills">CAD</div>
                 <div class = "card-skills">Solidworks Surfacing</div>
                 <div class = "card-skills">Fusion 360</div>
-                <div class = "card-skills">3D Printing(Bambu Labs)</div>
+                <div class = "card-skills">3D Printing</div>
                 <div class = "card-skills">Java</div>
                 <div class = "card-skills">Python</div>
                 <div class = "card-skills">C++</div>
@@ -50,7 +60,7 @@
                 <div class = "card-skills">CAD</div>
                 <div class = "card-skills">Solidworks Surfacing</div>
                 <div class = "card-skills">Fusion 360</div>
-                <div class = "card-skills">3D Printing(Bambu Labs)</div>
+                <div class = "card-skills">3D Printing</div>
                 <div class = "card-skills">Java</div>
                 <div class = "card-skills">Python</div>
                 <div class = "card-skills">C++</div>
@@ -65,70 +75,39 @@
         <section class = "personal-projects">
             <div class = "white-box-section">
                 <h1>Personal Projects</h1>
-                <div class="projects-carousel-container">
-                    <button class="carousel-nav-btn carousel-prev" aria-label="Previous project">‹</button>
-                    <div class="projects-carousel">
-                        <div class="project-card active">
-                            <img src="images/SimRigCover.png" alt="Project 1" class="project-image">
-                            <div class="project-info">
-                                <a href="projects.html" class="project-link-btn">F1 Sim Rig (Full Monocoque)</a>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <img src="images/WindTunnelCover.jpg" alt="Project 2" class="project-image">
-                            <div class="project-info">
-                                <a href="projects.html" class="project-link-btn">Wind Tunnel</a>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <img src="images/Solar-car.png" alt="Project 3" class="project-image">
-                            <div class="project-info">
-                                <a href="projects.html" class="project-link-btn">CFD Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-nav-btn carousel-next" aria-label="Next project">›</button>
-                    <div class="carousel-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                    </div>
+                <div class="projects-grid">
+                    <a href="projects.html" class="project-item">
+                        <img src="images/SimRigCover.png" alt="F1 Sim Rig" class="project-image">
+                        <h3>F1 Sim Rig (Full Monocoque) ></h3>
+                    </a>
+                    <a href="projects.html" class="project-item">
+                        <img src="images/WindTunnelCover.jpg" alt="Wind Tunnel" class="project-image">
+                        <h3>Wind Tunnel ></h3>
+                    </a>
                 </div>
             </div>
         </section>
 
         <div class = "spacer">
-
+            <img src="images/WindTunnelCover.jpg" alt="spacer image">
         </div>
 
         <section class = "solar-projects"> 
             <h1>UBC Solar Projects</h1>
-            <div class="projects-carousel-container solar-carousel-container">
-                <button class="carousel-nav-btn carousel-prev solar-prev" aria-label="Previous project">‹</button>
-                <div class="projects-carousel solar-carousel">
-                    <div class="project-card active solar-card">
-                        <img src="images/project1.jpg" alt="Solar Project 1" class="project-image">
-                        <div class="project-info">
-                            <a href="projects.html" class="project-link-btn">Solar Project 1</a>
-                        </div>
-                    </div>
-                    <div class="project-card solar-card">
-                        <img src="images/project2.jpg" alt="Solar Project 2" class="project-image">
-                        <div class="project-info">
-                            <a href="projects.html" class="project-link-btn">Solar Project 2</a>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-nav-btn carousel-next solar-next" aria-label="Next project">›</button>
-                <div class="carousel-dots solar-dots">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                </div>
+            <div class="projects-grid solar-grid">
+                <a href="projects.html" class="project-item">
+                    <img src="images/Solar-car.png" alt="WindShield" class="project-image">
+                    <h3>WindShield ></h3>
+                </a>
+                <a href="projects.html" class="project-item">
+                    <img src="images/Solar-car.png" alt="Carbon Fiber Plug" class="project-image">
+                    <h3>Carbon Fiber Plug ></h3>
+                </a>
             </div>
         </section>
 
         <div class = "spacer">
-
+            <img src="images/Solar-car.png" alt="spacer image">
         </div>
     </main>
 
