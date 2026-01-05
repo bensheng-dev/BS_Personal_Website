@@ -396,7 +396,7 @@ nav a:hover {
 
 
 .personal-projects h1{
-    color: #778DA9;
+    color: #c9d7f1;
     font-size: 60px;
     font-family: 'Georgia', sans-serif;
     margin-top: 5px;
@@ -602,7 +602,7 @@ nav a:hover {
     min-height: 300px;
     height: auto;
     position: relative;
-    background-color: #1B263B;
+    background-color: #415A77;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -621,7 +621,7 @@ nav a:hover {
 .solar-projects h1{
     position: relative;
     isolation: isolate;
-    color: #778DA9;
+    color: #c9d7f1;
     font-size: 60px;
     margin-top: 25px;
     margin-bottom: 20px;
@@ -633,7 +633,7 @@ nav a:hover {
 }
 
 .white-box-section{
-    background-color:#1B263B;
+    background-color:#415A77;
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     min-height: 450px;
@@ -892,8 +892,10 @@ nav a:hover {
     border-radius: 6px;
 }
 
+
 .spacer{
-    background-color:#E0E1DD;
+    background-color:#1B263B;
+    /*background: linear-gradient(to bottom, #E0E1DD, #1B263B);*/
     min-height: 150px;
     height: auto;
     display: flex;
@@ -931,7 +933,8 @@ nav a:hover {
 }
 
 footer {
-    background: #1B263B;
+    /*background: #1B263B;*/
+    background: linear-gradient(to bottom, #E0E1DD, #778DA9);
     padding: 10px;
     margin-top: auto; /* This ensures it stays at the bottom */
 }
@@ -939,7 +942,7 @@ footer {
 footer p{
     font-family: 'Futura Light', sans-serif;
     font-size: 15px;
-    color:#e0e0e0;
+    color:#1B263B;
 }
 
 .image-container-row{
