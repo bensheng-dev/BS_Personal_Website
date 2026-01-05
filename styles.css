@@ -188,30 +188,39 @@ nav a:hover {
 /* About page: text flows under image */
 .intro.float-image {
     display: block;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
 }
 
 .intro.float-image img {
     float: left;
     margin-right: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     margin-left: 70px;
     margin-top: 0;
     transform: none;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
 }
 
 .intro.float-image .container {
     display: block;
     overflow: hidden;
+    margin-right: 70px; /* Match right margin of full-width container */
+    padding-bottom: 0;
+    min-height: 100%;
 }
 
 .intro h1{
     color: #1B263B;
     font-size: 80px;
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     font-family: 'Georgia', sans-serif;
     font-weight: 900;
-    height: 100px;
+    min-height: 100px;
     line-height: 1.25;
 }
 
@@ -219,7 +228,7 @@ nav a:hover {
     width: 100%;
     max-width:400px; /* Set same size for both images */
     height: auto; /* Ensures consistent height */
-    border-radius: 30%; /* Optional: Adds rounded corners */
+    border-radius: 25%; /* Optional: Adds rounded corners */
     object-fit: cover;
     margin-right: 40px;
     margin-left: 70px;
@@ -248,10 +257,200 @@ nav a:hover {
 }
 
 .intro .container p + p {
-    margin-top: 2px;
+    margin-top: 1em;
+}
+
+.intro .container p {
+    margin-bottom: 0;
+}
+
+/* About content wrapper to contain both sections */
+.about-content-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 15px auto;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.intro.float-image {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.intro.float-image img {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    width: 400px;
+    max-width: 400px;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: top;
+    float: none;
+    margin: 0;
+    transform: none;
+}
+
+.intro.float-image .container {
+    margin-left: calc(70px + 400px + 30px); /* Left margin + image width + gap */
+    margin-right: 70px;
+    min-height: 100%;
+}
+
+.about-content-wrapper .about-full-width {
+    margin: 0;
+    padding-top: 15px;
+    clear: none;
+    position: relative;
+}
+
+/* Make image extend to cover both sections */
+.about-content-wrapper .intro.float-image img {
+    height: 100%;
+    bottom: 0;
+}
+
+/* About page full-width paragraph container */
+.about-full-width {
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    max-width: 1100px;
+    clear: both; /* Clear the float from the image above */
+    position: relative;
+}
+
+.about-full-width-container {
+    margin-left: 70px; /* Match left margin of image */
+    margin-right: 70px; /* Match right margin for symmetry */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.about-full-width-container p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;
+    font-family: 'Futura Light', sans-serif;
+    margin: 0;
+    margin-top: 1em;
+    max-width: none; /* Remove max-width restriction to span full width */
+}
+
+.about-full-width-container p:first-child {
+    margin-top: 0;
+}
+
+/* Certifications Section */
+.certifications-section {
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 20px 70px;
+}
+
+.certifications-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.certification-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.certification-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.certification-title {
+    color: #1B263B;
+    font-size: 20px;
+    font-family: 'Futura Light', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+/* Resume Section */
+.resume-section {
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 20px 70px;
+}
+
+.resume-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.resume-title {
+    color: #1B263B;
+    font-size: 60px;
+    font-family: 'Georgia', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 12.5%;
+}
+
+.resume-pdf-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    gap: 5px;
+    transition: color 0.3s ease;
+    margin-right: 12.5%;
+}
+
+.resume-pdf-link:hover {
+    color: #1B263B;
+}
+
+.resume-pdf-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+.resume-pdf-link span {
+    font-size: 14px;
+    font-family: 'Futura Light', sans-serif;
+}
+
+.resume-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-image {
+    width: 75%;
+    max-width: 75%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Project Page Specific Styles */
+.intro-reverse .container h1 {
+    margin-bottom: 20px;
+}
+
 .intro-reverse .container .project-subtitle {
     text-decoration: underline;
     font-size: 18px;
@@ -396,7 +595,7 @@ nav a:hover {
 
 
 .personal-projects h1{
-    color: #c9d7f1;
+    color: #778DA9;
     font-size: 60px;
     font-family: 'Georgia', sans-serif;
     margin-top: 5px;
@@ -602,7 +801,7 @@ nav a:hover {
     min-height: 300px;
     height: auto;
     position: relative;
-    background-color: #415A77;
+    background-color: #1B263B;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -621,7 +820,7 @@ nav a:hover {
 .solar-projects h1{
     position: relative;
     isolation: isolate;
-    color: #c9d7f1;
+    color: #778DA9;
     font-size: 60px;
     margin-top: 25px;
     margin-bottom: 20px;
@@ -633,7 +832,7 @@ nav a:hover {
 }
 
 .white-box-section{
-    background-color:#415A77;
+    background-color:#1B263B;
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     min-height: 450px;
@@ -892,10 +1091,8 @@ nav a:hover {
     border-radius: 6px;
 }
 
-
 .spacer{
-    background-color:#1B263B;
-    /*background: linear-gradient(to bottom, #E0E1DD, #1B263B);*/
+    background-color:#E0E1DD;
     min-height: 150px;
     height: auto;
     display: flex;

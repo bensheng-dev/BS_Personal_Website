@@ -28,24 +28,25 @@
 
     <main>
 
-        <section class = "intro float-image">
-            <img src="images/IMG_9672.JPG" alt="intro image">
-            <div class="container">
-                <h1>About Me</h1>
-                <p>My name is Benjamin Sheng. I am a first year engineering student attending the University of British Columbia.
-                   
-                <p>My dream is to become an aerodynamicist working in Formula One. My idol is Adrian Newey, regarded as the greatest F1 aerodynamicist ever. I look to replicate his success. His autobiography inspired me, detailing everything he's learned over his lengthy career. </p>
-                
-                <p>This has made me incredibly passionate about engineering, specifically aerospace engineering. I constantly strive to further my understanding of this 
-                complicated field of science. One of my favorite hobbies is analyzing each team's upgrades for a certain weekend. This allows me to stay fresh and continue learning in an ever-evolving sport. </p>
+        <div class="about-content-wrapper">
+            <section class = "intro float-image">
+                <img src="images/IMG_9675.JPG" alt="intro image">
+                <div class="container">
+                    <h1>About Me</h1>
+                    <p>My name is Benjamin Sheng. I am a First Year Engineering Student at the University of British Columbia.</p>
 
-                <p>Outside of engineering, I love Basketball and have played competitively since grade 3. In addition to Basketball, I enjoy playing volleyball and ultimate frisbee. I run the F1 Fan Forum at my school, which is a club of 60+ fans that get together to watch races, compete in sim races, and play fantasy leagues. As a hobby, I also follow Aviation, MotoGP, and IndyCar.</p>
+                    <p>My dream is to become an aerodynamicist working in Formula One. My idol is Adrian Newey, regarded as the greatest F1 aerodynamicist ever. I look to replicate his success. His autobiography inspired me, detailing everything he's learned over his lengthy career.</p>
 
-                <subheader>Certifications:</subheader>
-                <p>CSWA - Certified SolidWorks Associate</p>
-                <p>Driver61 Aerodynamics Certification</p>        
-            </div>
-        </section>
+                    <p>This has made me incredibly passionate about engineering, specifically aerospace engineering. I constantly strive to further my understanding of this complicated field of science. One of my favorite hobbies is analyzing each team's upgrades for a certain weekend. This allows me to stay fresh and continue learning in an ever-evolving sport.</p>
+                </div>
+            </section>
+
+            <section class="about-full-width">
+                <div class="about-full-width-container">
+                    <p>Outside of engineering, I love Basketball and have played competitively since grade 3. In addition to Basketball, I enjoy playing volleyball and ultimate frisbee. I run the F1 Fan Forum at my school, which is a club of 60+ fans that get together to watch races, compete in sim races, and play fantasy leagues. As a hobby, I also follow Aviation, MotoGP, and IndyCar.</p>
+                </div>
+            </section>
+        </div>
 
         <div class = "carousel-title">
             <h1>Skills</h1>
@@ -78,7 +79,34 @@
             </div>
         </div>
 
-        <h1>Resume</h1>
+        <section class="certifications-section">
+            <div class="certifications-container">
+                <div class="certification-item">
+                    <img src="images/CSWACertificate.png" alt="Certification 1" class="certification-image">
+                    <h3 class="certification-title">Certified SolidWorks Associate (100% Score)</h3>
+                </div>
+                <div class="certification-item">
+                    <img src="images/Driver61.png" alt="Certification 2" class="certification-image">
+                    <h3 class="certification-title">Driver61 Aerodynamics Certification</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <div class="resume-header">
+                <h1 class="resume-title">Resume</h1>
+                <a href="BenShengResume26.pdf" class="resume-pdf-link" download>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 2V8H20" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>PDF</span>
+                </a>
+            </div>
+            <div class="resume-image-container">
+                <img src="images/resume.jpg" alt="Benjamin Sheng Resume" class="resume-image">
+            </div>
+        </section>
        
     </main>
 
