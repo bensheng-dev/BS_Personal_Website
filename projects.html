@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Engineering Portfolio</title>
+    <title>Benjamin Sheng Portfolio</title>
+    <!-- Link to your CSS file here if you have one -->
     <link rel="stylesheet" href="styles.css">
+    <script src="carousel.js"></script>
+    <script src="projects-carousel.js"></script>
+    <script src="menu.js"></script>
 </head>
-
 <body>
     <header>
         <a class="btn-custom" href = "index.html">Benjamin Sheng</a>
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="blogs.html">Aero Blog</a>
@@ -19,7 +27,48 @@
     </header>
 
     <main>
-       
+        <section class = "personal-projects">
+            <div class = "white-box-section">
+                <h1>Personal Projects</h1>
+                <div class="projects-grid">
+                    <a href="f1simrig.html" class="project-item">
+                        <img src="images/SimRigCover.png" alt="F1 Sim Rig" class="project-image">
+                        <h3>F1 Sim Rig (Full Monocoque) ></h3>
+                    </a>
+                    <a href="windtunnel.html" class="project-item">
+                        <img src="images/WindTunnelCover.jpg" alt="Wind Tunnel" class="project-image">
+                        <h3>Wind Tunnel ></h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class = "spacer">
+            <img src="images/WindTunnelCover.jpg" alt="spacer image">
+        </div>
+
+        <section class = "solar-projects"> 
+            <h1>UBC Solar Projects</h1>
+            <div class="projects-grid solar-grid">
+                <a href="windshield.html" class="project-item">
+                    <img src="images/Solar-car.png" alt="WindShield" class="project-image">
+                    <h3>WindShield ></h3>
+                </a>
+                <a href="carbonfiberplug.html" class="project-item">
+                    <img src="images/Solar-car.png" alt="Carbon Fiber Plug" class="project-image">
+                    <h3>Carbon Fiber Plug ></h3>
+                </a>
+            </div>
+        </section>
+
+        <div class = "spacer">
+            <img src="images/Solar-car.png" alt="spacer image">
+        </div>
     </main>
+
+    <footer>
+        <p>Benjamin Sheng</p>
+    </footer>
+
 </body>
 </html>
