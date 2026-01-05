@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benjamin Sheng Portfolio</title>
+    <!-- Preload Futura Light font to prevent flicker -->
+    <link rel="preload" href="fonts/Futura-Light.ttf" as="font" type="font/ttf" crossorigin>
     <!-- Link to your CSS file here if you have one -->
     <link rel="stylesheet" href="styles.css">
     <script src="carousel.js"></script>
@@ -44,7 +46,17 @@
     </main>
 
     <footer>
-        <p>Benjamin Sheng</p>
+        <div class="footer-content">
+            <p>Benjamin Sheng</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/benjamin-sheng-6bab27316/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                    <img src="images/Linkedin.png" alt="LinkedIn" class="social-icon-img">
+                </a>
+                <a href="https://www.instagram.com/ben_sheng10/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                    <img src="images/Instagram.png" alt="Instagram" class="social-icon-img">
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
     
