@@ -235,10 +235,17 @@ nav a:hover {
     transform: translateX(-5%); /* Moves the image slightly to the left */
 }
 
+.intro-reverse .container {
+    padding-left: 30px;
+}
+
 .intro-reverse img {
-    margin-left: 40px;
-    margin-right: 70px;
+    margin-left: 0;
+    margin-right: 30px;
     transform: translateX(5%); /* Moves the image slightly to the right */
+    max-width: 500px;
+    max-height: 350px; /* Wider image for project pages */
+    border-radius: 5%; /* Reduced border radius */
 }
 
 .intro p {
@@ -1328,5 +1335,229 @@ code{
         padding: 14px;
         font-size: 16px;
         margin: 10px auto;
+    }
+}
+
+/* Project Section Styles */
+.project-section {
+    max-width: 1100px;
+    margin: 15px auto;
+}
+
+.project-section-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 0 30px;
+}
+
+.project-section-text {
+    flex: 1;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.project-section-text h2 {
+    font-family: 'Georgia', sans-serif;
+    font-size: 56px;
+    color: #1B263B;
+    margin: 0 0 30px 0;
+    text-align: left;
+}
+
+.project-section-text p {
+    font-family: 'Futura Light', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1B263B;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.project-section-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.project-section-images h2 {
+    font-family: 'Georgia', sans-serif;
+    font-size: 48px;
+    color: #1B263B;
+    margin: 0 0 20px 0;
+    text-align: left;
+    grid-column: 1 / -1;
+}
+
+.project-section-images img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Make bottom two images the same size (when there are 4 images + h2) */
+.project-section-images img:nth-child(4),
+.project-section-images img:nth-child(5) {
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Prototype Section Styles */
+.prototype-section {
+    width: 100%;
+}
+
+.prototype-section h2 {
+    font-family: 'Georgia', sans-serif;
+    font-size: 56px;
+    color: #1B263B;
+    margin: 0 0 30px 0;
+    text-align: left;
+}
+
+.prototype-images {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.prototype-images img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.prototype-text {
+    width: 100%;
+}
+
+.prototype-text p {
+    font-family: 'Futura Light', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1B263B;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.prototype-text p strong {
+    font-weight: bold;
+    font-family: 'Futura Light', sans-serif;
+}
+
+/* For sections with 3 images: first image spans full width */
+.project-section-images img:first-child:nth-last-child(3) {
+    grid-column: 1 / -1;
+}
+
+/* For sections with 4 images: 2x2 grid */
+.project-section-images img:first-child:nth-last-child(4) {
+    grid-column: 1;
+}
+
+/* Responsive styles for project section */
+@media (max-width: 1024px) {
+    .project-section-content {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    .project-section-text {
+        max-width: 100%;
+    }
+
+    .project-section-images {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-section {
+        padding: 40px 0;
+    }
+
+    .project-section-content {
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .project-section-text h2 {
+        font-size: 36px;
+    }
+
+    .project-section-text p {
+        font-size: 16px;
+    }
+
+    .project-section-images {
+        grid-template-columns: 1fr;
+    }
+
+    .project-section-images img:first-child {
+        grid-column: 1;
+    }
+
+    .prototype-images {
+        flex-direction: column;
+    }
+
+    .prototype-images img {
+        width: 100%;
+    }
+
+    .prototype-section h2 {
+        font-size: 36px;
+    }
+
+    .prototype-text p {
+        font-size: 16px;
+    }
+}
+
+/* Project Navigation Styles */
+.project-navigation {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Futura Light', sans-serif;
+    font-size: 18px;
+    color: #1B263B;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.nav-link.prev-project {
+    text-align: left;
+}
+
+.nav-link.next-project {
+    text-align: right;
+}
+
+/* Responsive styles for project navigation */
+@media (max-width: 768px) {
+    .project-navigation {
+        flex-direction: column;
+        gap: 20px;
+        margin: 40px auto;
+    }
+
+    .nav-link {
+        font-size: 16px;
     }
 }
