@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Benjamin Sheng Portfolio</title>
     <!-- Preload Futura Light font to prevent flicker -->
     <link rel="preload" href="fonts/Futura-Light.ttf" as="font" type="font/ttf" crossorigin>
@@ -41,7 +41,241 @@
                 <p class="project-list-item">3. Must fit on a table (Reasonable Size)</p>
 
             </div>
-            <img src="images/IMG_9672.JPG" alt="intro image">
+            <img src="WindTunnelImg/IMG_3050.jpg" alt="intro image">
+        </section>
+
+        <section class="resume-section-alt">
+            <div class="resume-header-alt">
+                <h1 class="resume-title-alt">Wind Tunnel Report</h1>
+                <a href="WindTunnelImg/WindTunnel_Report.pdf" class="resume-pdf-link-alt" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 2V8H20" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>PDF</span>
+                </a>
+            </div>
+            <div class="resume-content-row">
+                <div class="resume-text-alt">
+                    <p>This page goes over a fairly basic overview of the wind tunnel and the results that came from it. However, for a deeper analysis
+                        of everything from the design process, iterations, issues and testing refer to my report titled:
+                    </p>
+                    <p>"The Design Process and Qualitative Flow Analysis of a 1:18 Scale Wind Tunnel"
+                    </p>
+
+                    <p>The report is a summation of everything I did and learned and what I would do to improve the wind tunnel
+                        in the future. Please enjoy and feel free to download it. 
+                    </p>
+                </div>
+                <div class="resume-image-container-alt">
+                    <iframe src="WindTunnelImg/WindTunnel_Report.pdf" class="resume-pdf-embed" title="Wind Tunnel Report (PDF)"></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="prototype-section-alt">
+                    <h2>Contraction</h2>
+                    <div class="prototype-text-with-img">
+                        <div class="prototype-text-alt">
+                            <p>The main design feature of this sub-assembly is a cone. Its purpose is to increase the speed of air entering the chambers. The area reduction from 143 to 35 square inches, in theory (Bernoulli's Principle), increases the velocity from 8.2938 m/s (fan pulling air) to 33.9 m/s (around 122 km/h)—a four-fold increase. Due to the relatively thin depth of the cone and a non-sealed system, the actual velocity increase could be much lower.</p>
+                    <p>A 1-inch-thick round honeycomb was added as a second layer of the subsystem. Its purpose is to make the air entering the chamber laminate (flow smoothly), allowing for better analysis of how aerodynamic parts affect airflow.</p>
+                        </div>
+                        <img src="WindTunnelImg/ContractionIso.png" alt="Built Rig Prototype">
+                    </div>
+
+            
+                    <div class="project-section-images-full-width project-section-images-four-across contraction-bottom-images">
+                    <img src="WindTunnelImg/ContractionTop.png" alt="Contraction top view">
+                    <img src="WindTunnelImg/ContractionFront.png" alt="Contraction front view">
+                    <img src="WindTunnelImg/ContractionSide.png" alt="Contraction bottom side view">
+                    <img src="WindTunnelImg/ContractionBack.png" alt="Contraction isometric view">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content project-section-reversed">
+                <div class="project-section-images project-section-images-two">
+                    <img src="WindTunnelImg/ServoTop.png" alt="Servo mounting top view">
+                    <img src="WindTunnelImg/ServoIso.png" alt="Servo mounting isometric view">
+                </div>
+                <div class="project-section-text">
+                    <h2>Servo Mounting and Housing.</h2>
+                    <p>Smoke must be added to the air to visualize the airflow around a model. This subsystem within the contraction assembly is designed to do that. I've designed a long smokestack with exits spread down the tube. This will allow for an even distribution of smoke along the height of the chamber. A small smoke machine is used to pump smoke into the stack.</p>
+                    <p>I wanted a way to remotely control the smokestack's position, like a proper tunnel. So, a simple servo gear system moves the smokestack along a guide rail. I use a 2000 series dual-mode servo and two custom-designed 30-tooth, 3mm HTD belt pulleys. An attachment clip on the smokestack hooks onto the timing belt and allows it to slide. A rocker switch is mounted outside the chamber to control the smokestack.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="prototype-section-alt">
+                    <h2>Chamber</h2>
+                    <div class="prototype-text-with-img">
+                        <div class="prototype-text-alt">
+                            <p>The chamber has a testing platform 15 x 7.5 inches and 6.5 inches tall. LED lights are along the angled sides of the roof. Clear 1/8 plastic panels can slide in and out to allow access to the chamber itself. There are holes on the front for all the switches. A maintenance cover in the back allows access to the chamber's Arduino system inside (underneath the platform).</p>
+                    <p>In this project I used M4 screws to attach everything together. An old version used dovetails, but this was scrapped due to its complexity.</p>
+                        </div>
+                        <img src="WindTunnelImg/WTCADTop.png" alt="Built Rig Prototype">
+                    </div>
+
+                    <div class="prototype-images-alt">
+                        <img src="WindTunnelImg/WTCADBack.png" alt="Brightside Practice Plug side view">
+                        <img src="WindTunnelImg/WTCADSide.png" alt="Brightside Practice Plug bottom view">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="prototype-section-alt">
+                    <h2>Contraction</h2>
+                    <div class="prototype-text-with-img">
+                        <div class="prototype-text-alt">
+                            <p>The main design feature of this sub-assembly is a cone. Its purpose is to increase the speed of air entering the chambers. The area reduction from 143 to 35 square inches, in theory (Bernoulli's Principle), increases the velocity from 8.2938 m/s (fan pulling air) to 33.9 m/s (around 122 km/h)—a four-fold increase. Due to the relatively thin depth of the cone and a non-sealed system, the actual velocity increase could be much lower.</p>
+                    <p>A 1-inch-thick round honeycomb was added as a second layer of the subsystem. Its purpose is to make the air entering the chamber laminate (flow smoothly), allowing for better analysis of how aerodynamic parts affect airflow.</p>
+                        </div>
+                        <img src="WindTunnelImg/DiffusionIso.png" alt="Built Rig Prototype">
+                    </div>
+                </div>
+            </div>
+            <div class="project-section-images-full-width">
+                <img src="WindTunnelImg/DiffusionSide.png" alt="Diffusion side view">
+                <img src="WindTunnelImg/DiffusionFront.png" alt="Diffusion front view">
+                <img src="WindTunnelImg/DiffusionTop.png" alt="Diffusion fan top-down view">
+                <img src="WindTunnelImg/WTCADFan.png" alt="Diffusion fan close top-down view">
+            </div>
+        </section>
+
+        <section class="project-section completed-windtunnel-section">
+            <h2 class="completed-windtunnel-section-title">Completed Windtunnel</h2>
+            <div class="completed-windtunnel-grid">
+                <figure class="completed-windtunnel-item">
+                    <img src="WindTunnelImg/TunnelSide.jpg" alt="Completed windtunnel 1">
+                    <figcaption class="completed-windtunnel-caption">Wind Tunnel Side View</figcaption>
+                </figure>
+                <figure class="completed-windtunnel-item">
+                    <img src="WindTunnelImg/TunnelTop.jpg" alt="Completed windtunnel 2">
+                    <figcaption class="completed-windtunnel-caption">Wind Tunnel Top View</figcaption>
+                </figure>
+                <figure class="completed-windtunnel-item">
+                    <img src="WindTunnelImg/TunnelFR.jpg" alt="Completed windtunnel 3">
+                    <figcaption class="completed-windtunnel-caption">Wind Tunnel Front Right</figcaption>
+                </figure>
+                <figure class="completed-windtunnel-item">
+                    <img src="WindTunnelImg/TunnelBR.jpg" alt="Completed windtunnel 4">
+                    <figcaption class="completed-windtunnel-caption">Wind Tunnel Back Right</figcaption>
+                </figure>
+                <figure class="completed-windtunnel-item">
+                    <img src="WindTunnelImg/TunnelFlow1.jpg" alt="Completed windtunnel 5">
+                    <figcaption class="completed-windtunnel-caption">Low Speed Flow Far</figcaption>
+                </figure>
+                <figure class="completed-windtunnel-item">
+                    <img src="WindTunnelImg/TunnelFlow2.jpg" alt="Completed windtunnel 6">
+                    <figcaption class="completed-windtunnel-caption">Low Speed Flow Near</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="project-section videos-section">
+            <h2 class="videos-section-title">Videos</h2>
+            <div class="videos-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <!-- YouTube: <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+                        <video controls><source src="WindTunnelImg/HighSpeedRun.MOV" type="video/mp4"></video><!-- Or local: <video controls><source src="WindTunnelImg/your-video.mp4" type="video/mp4"></video> -->
+                    </div>
+                    <p class="video-title">High-Speed Run</p>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <!-- Replace with your video -->
+                        <video controls><source src="WindTunnelImg/LowSpeed.MOV" type="video/mp4"></video>
+                    </div>
+                    <p class="video-title">Low-Speed Run</p>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls><source src="WindTunnelImg/SmokestackMove.mov" type="video/mp4"></video>
+                    </div>
+                    <p class="video-title">Smoke System Moving</p>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls><source src="WindTunnelImg/LowSpeedRear.MOV" type="video/mp4"></video>
+                    </div>
+                    <p class="video-title">Low-Speed Run Rear End</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section flow-results-section">
+            <h2 class="flow-results-section-title">Flow Results</h2>
+            <div class="project-section-images-full-width flow-results-four-with-captions">
+                <figure class="flow-result-four-item">
+                    <img src="WindTunnelImg/Mesh1.jpg" alt="Mesh 1">
+                    <figcaption class="flow-result-four-caption">Simple Hole Exit Mesh</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="WindTunnelImg/Mesh2.jpg" alt="Mesh 2">
+                    <figcaption class="flow-result-four-caption">Coarse Exit Mesh</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="WindTunnelImg/Mesh3.jpg" alt="Mesh 3">
+                    <figcaption class="flow-result-four-caption">Bottom Half Exit Mesh</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="WindTunnelImg/Mesh4.jpg" alt="Mesh 4">
+                    <figcaption class="flow-result-four-caption">Final Exit Mesh</figcaption>
+                </figure>
+            </div>
+
+            <p class="windshield-closing-paragraph-alt">When testing the wind tunnel, I realized that the quality of the flow was changing
+                based on what type of mesh I used in front of the exit. This whole process was detailed in the report, however, in short the 
+                fan creates massive vibrations in the air that leak into the chamber because of how close it is. To reduce this, having a mesh in front of it
+                can help reduce this issue. The four images above are the different meshes that were tested and the eight images below are the results of each 
+                at low and high speed. In the end, I determined that it is best to have different meshes for various speeds. At low speeds
+                a fine mesh allows for smoother airflow whereas at high speed a coarse mesh performs better. 
+            </p>
+            <div class="flow-results-grid">
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh1Slow.jpg" alt="Simple Hole Slow Speed">
+                    <figcaption class="flow-result-caption">Simple Hole Slow Speed</figcaption>
+                </figure>
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh1Fast.jpg" alt="Flow result 2">
+                    <figcaption class="flow-result-caption">Simple Hole High Speed</figcaption>
+                </figure>
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh2Slow.jpg" alt="Flow result 3">
+                    <figcaption class="flow-result-caption">Coarse Exit Slow Speed</figcaption>
+                </figure>
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh2Fast.jpg" alt="Flow result 4">
+                    <figcaption class="flow-result-caption">Coarse Exit High Speed</figcaption>
+                </figure>
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh3Slow.jpg" alt="Flow result 5">
+                    <figcaption class="flow-result-caption">Bottom Half Exit Slow Speed</figcaption>
+                </figure>
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh3Fast.jpg" alt="Flow result 6">
+                    <figcaption class="flow-result-caption">Bottom Half Exit High Speed</figcaption>
+                </figure>
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh4Slow.jpg" alt="Flow result 7">
+                    <figcaption class="flow-result-caption">Final Exit Slow Speed</figcaption>
+                </figure>
+                <figure class="flow-result-item">
+                    <img src="WindTunnelImg/Mesh4Fast.jpg" alt="Flow result 8">
+                    <figcaption class="flow-result-caption">Final Exit High Speed</figcaption>
+                </figure>
+            </div>
         </section>
 
         <nav class="project-navigation">

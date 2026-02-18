@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Benjamin Sheng Portfolio</title>
     <!-- Preload Futura Light font to prevent flicker -->
     <link rel="preload" href="fonts/Futura-Light.ttf" as="font" type="font/ttf" crossorigin>
@@ -33,14 +33,142 @@
             <div class="container">
                 <h1>Carbon Fiber Plug</h1>
                 <p class="project-subtitle">Skills: Solidworks Surfacing</p>
-                <p class="project-date">September 2025 - Present</p>
+                <p class="project-date">November 2025 - Present</p>
 
-                <p class="project-description">Being a huge fan of the F1 games, I wanted to create the most accurate simulation of being an F1 driver. I had a few requirements for this project:</p>
-                <p class="project-list-item">1. It must look like a real monocoque</p>
-                <p class="project-list-item">2. It must be low-cost</p>
-                <p class="project-list-item">3. It must be relatively light (so I can move it around)</p>
+                <p class="project-description">The process of building an aeroshell is three-fold:</p>
+                <p class="project-list-item">1. Surface a male mold with indents for all features on the car.</p>
+                <p class="project-list-item">2. Get a foam male mold and create a fiberglass female mold from it.</p>
+                <p class="project-list-item">3. Do the composite wet layup using the female mold to create the final aeroshell.</p>
+                <div class="intro-full-width">
+                    <p class="project-description">Last November I was tasked with designing the bottomshell plug (the male mold) for the aeroshell. As I became lead, I took over all the CAD and surfacing upkeep for the car and the plugs. Below is all the work I've completed in regards to the carbon fiber plugs.</p>
+                </div>
             </div>
-            <img src="images/IMG_9672.JPG" alt="intro image">
+            <img src="CarbonFiberPlugImg/EP4Iso.png" alt="Carbon fiber plug intro image">
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="prototype-section-alt">
+                    <h2>Brightside Practice Plug</h2>
+                    <div class="prototype-text-with-img">
+                        <div class="prototype-text-alt">
+                            <p>When I first got the projecct, I using our old car (Brightside) to make a practice plug. This was to learn 
+                                how to use the surfacing tools at hand and create the plug. It took a few weeks to complete the practice plug.
+                            The way I achieved this, was by looking at the old car and rolling back CAD features to create the plug. </p>
+                            <p>I actually re-created the entire car in CAD before creating the plug. I learned a lot about the process of designing and surfacing
+                                airfoils and how to create a clean and accurate plugs. These plugs must be accurate otherwise components designed for the car may not line up as intended. 
+                            </p>
+                        </div>
+                        <img src="CarbonFiberPlugImg/BSIso.png" alt="Built Rig Prototype">
+                    </div>
+                    <div class="intro-full-width">
+                        <p class="project-description">The difficult part about creating the plugs is the indents. Indents are marks that help
+                            us know where the features of the bottomshell or topshell should be. The fairing indents are 1.5mm and all the lights are 1mm indents. 
+                            This will come up as a bump in the fiberglass mold and an indent in the composite layups; which we will then cut a hole out of. 
+                        </p>
+                    </div>
+
+                    <div class="prototype-images-alt">
+                        <img src="CarbonFiberPlugImg/BSSide.png" alt="Brightside Practice Plug side view">
+                        <img src="CarbonFiberPlugImg/BSBottom.png" alt="Brightside Practice Plug bottom view">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="prototype-section-alt">
+                    <h2>Prototype Plug</h2>
+                    <div class="prototype-text-with-img">
+                        <div class="prototype-text-alt">
+                            <p>Before we build our next generation Cascadia car, we will create a prototype of the car to test our manufacturing 
+                                process and to get some practice with layups and creating molds. The specifications for the prototype are:
+                            </p>
+                            <p class="project-list-item">1. 1/4 scale of the Cascadia</p>
+                            <p class="project-list-item">2. Only the bottomshell of the car</p>
+                            <p class="project-list-item">3. 45x45mm section of the rear of the car</p>
+
+                            <p>For this prototype plug, I created arbritrary dimensions for the fairings and the lights so that we could practice the indents
+                                and cutting out sections of the final layup. 
+                            </p>
+                            
+                        </div>
+                        <img src="CarbonFiberPlugImg/PrototypeIso.png" alt="Built Rig Prototype">
+                    </div>
+                    <div class="intro-full-width">
+                        <p class="project-description">Using the practices that I learned through the Brightside Practice plug, I created this prototype plug 
+                            with relative ease. The plug while basic did have some challenging aspects. Creating the 1.5mm and 1mm offsets were very difficult. 
+                            This is because of the reduced size of the fillets meant that some fillets were creating intersecting geometry when offset. 
+                            Unfortunately this issue was only solved by increasing the fillet size. While this in turn did help aero (created less vortices), 
+                            it is not a concrete solution to the offset issue. 
+                        </p>
+                    </div>
+
+                    <div class="prototype-images-alt">
+                        <img src="CarbonFiberPlugImg/PrototypeBottom.png" alt="Built Rig Prototype Left View">
+                        <img src="CarbonFiberPlugImg/PrototypeRear.png" alt="Built Rig Prototype Right View">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="prototype-section-alt">
+                    <h2>EP4 Bottomshell Plug</h2>
+                    <div class="prototype-text-with-img">
+                        <div class="prototype-text-alt">
+                            <p>As we develop our new Cascadia car, we are consistently creating new iterations to test in CFD to achieve the lowest possible drag coefficient. 
+                                Along the way, our fourth iteration (EP4) had great numbers and was the overall concept that we were going to move forward with. So we used this 
+                                iteration to do a lot of testing and to add all the designs of our auxiliaries to the car. 
+                            </p>
+                            <p>One big aspect of building the car is cost. So as a excerise for budget and Solidworks surfacing practice, I created a bottomshell plug of our EP4 aeroshell. 
+                                We sent this plug to Dependable Industries to get a quote on a foam male mold. This will help us determine how much money it will cost, and we can make changes to the plug'
+                                in an attempt to reduce machining time and cost. 
+                            </p>
+                        </div>
+                        <img src="CarbonFiberPlugImg/CarbonFiberPlugCover.png" alt="Built Rig Prototype">
+                    </div>
+                    <div class="intro-full-width">
+                        <p class="project-description">As shown in the photos below, there are indents for the fairings, battery access panel, lights and battery intake and exhaust holes. 
+                            This practice plug is much more complete than the Brightside on that I had made in the previous term. 
+                        </p>
+                    </div>
+
+                    <div class="prototype-images-alt">
+                        <img src="CarbonFiberPlugImg/Ep4PlugSide.png" alt="Built Rig Prototype Left View">
+                        <img src="CarbonFiberPlugImg/EP4PlugInside.png" alt="Built Rig Prototype Right View">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section-alt">
+            <div class="resume-header-alt">
+                <h1 class="resume-title-alt">Documentation</h1>
+                <a href="CarbonFiberPlugImg/Cascadia_Bottomshell_Tutorial.pdf" class="resume-pdf-link-alt" download>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 2V8H20" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>PDF</span>
+                </a>
+            </div>
+            <div class="resume-content-row">
+                <div class="resume-text-alt">
+                    <p>As a lead, I am trying to improve our documentation for the next generation of designers will build the car after Cascadia. 
+                        I created a master document for surfacing on Cascadia. In this doucment, there are pages of issues that we encountered when surfacing the aeroshell, plugs, canopy and thichkening the aeroshell. 
+                        There is also tutorials on how I created the plugs and certain methods that I found very helpful. 
+                    </p>
+                    <p>To the right you can see a preview of the tutorial for how to create the bottomshell plug. It is a summation of every step I take to create the plug and includes some methods
+                        that improve on the process and quality of the plug. 
+                    </p>
+                </div>
+                <div class="resume-image-container-alt">
+                    <iframe src="CarbonFiberPlugImg/Cascadia_Bottomshell_Tutorial.pdf" class="resume-pdf-embed" title="Cascadia Bottomshell Tutorial (PDF)"></iframe>
+                </div>
+            </div>
         </section>
 
         <nav class="project-navigation">
