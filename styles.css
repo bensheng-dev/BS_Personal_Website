@@ -1603,11 +1603,9 @@ code{
     margin: 15px auto;
 }
 
-/* Videos section: 2x2 grid for four wind tunnel videos — margins match .project-section-content (Diffusion) */
+/* Videos section: 2x2 grid for four wind tunnel videos — align with .project-section-content (Diffusion) */
 .videos-section {
     padding: 0 30px 40px;
-    margin-left: 12%;
-    margin-right: 12%;
 }
 .videos-section-title {
     font-family: 'Georgia', sans-serif;
@@ -1660,9 +1658,7 @@ code{
 /* Completed Windtunnel section: 2 columns × 3 rows, captions — margins match Diffusion */
 .completed-windtunnel-section {
     padding: 0 30px 40px;
-    margin-top: 50px; 
-    margin-left: 12%;
-    margin-right: 12%;/* add extra space above the title, separating it from the photos above */
+    margin-top: 50px;
 }
 .completed-windtunnel-section-title {
     font-family: 'Georgia', sans-serif;
@@ -1703,11 +1699,9 @@ code{
     }
 }
 
-/* Flow Results section: 2 columns × 4 rows, captions under each image — margins match .project-section-content (Diffusion) */
+/* Flow Results section: 2 columns × 4 rows, captions under each image — align with .project-section-content (Diffusion) */
 .flow-results-section {
     padding: 0 30px 40px;
-    margin-left: 12%;
-    margin-right: 12%;
 }
 .flow-results-section-title {
     font-family: 'Georgia', sans-serif;
