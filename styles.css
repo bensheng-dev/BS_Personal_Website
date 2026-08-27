@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @font-face {
     font-family: 'Futura Light';
@@ -37,7 +37,7 @@
     --futura-light: 'Futura Light', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --overpass-heavy: 'Overpass Heavy', 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --mono: 'JetBrains Mono', 'Courier New', Courier, monospace;
-    --serif-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --serif-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
 /* Prevent horizontal scroll and improve mobile rendering (iPhone-friendly) */
@@ -54,7 +54,9 @@ html, body {
     font-family: 'Futura Light', sans-serif;
     background-color: var(--bg-color);
     background-image:
-        repeating-linear-gradient(115deg, rgba(119, 141, 169, 0.09) 0px, rgba(119, 141, 169, 0.09) 1px, transparent 1px, transparent 70px);
+        radial-gradient(ellipse 1200px 700px at 50% 0%, rgba(65, 90, 119, 0.55), transparent 65%),
+        linear-gradient(180deg, #16283f 0%, var(--navy-deepest) 45%);
+    background-attachment: fixed;
     color: rgba(224, 225, 221, 0.75);
     margin: 0;
     padding: 0;
@@ -307,7 +309,6 @@ nav a:hover {
     margin-top: 5px;
     margin-bottom: 15px;
     font-family: var(--serif-display);
-    font-style: italic;
     font-weight: 400;
     min-height: 100px;
     line-height: 1.2;
@@ -501,7 +502,6 @@ nav a:hover {
     color: var(--cream);
     font-size: 60px;
     font-family: var(--serif-display);
-    font-style: italic;
     font-weight: 500;
     margin: 0;
     margin-left: 12.5%;
@@ -567,7 +567,6 @@ nav a:hover {
     color: var(--cream);
     font-size: 60px;
     font-family: var(--serif-display);
-    font-style: italic;
     font-weight: 500;
     margin-left:3%;
     margin-top: -2%;
@@ -730,7 +729,6 @@ nav a:hover {
 
 .intro subheader {
     font-family: var(--serif-display);
-    font-style: italic;
     font-size: 30px;
     display: block;
     margin-top: 25px;
@@ -763,7 +761,6 @@ nav a:hover {
     text-align: center;
     margin: 0;
     font-family: var(--serif-display);
-    font-style: italic;
     font-weight: 500;
 }
 
@@ -1107,6 +1104,285 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Project Showcase: featured project + list (home page) */
+.project-showcase {
+    background-color: var(--navy-surface);
+    border-top: 1px solid rgba(119, 141, 169, 0.2);
+    border-bottom: 1px solid rgba(119, 141, 169, 0.2);
+    padding: 60px 40px 70px;
+}
+
+.showcase-header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+}
+
+.showcase-title {
+    font-family: var(--serif-display);
+    font-weight: 600;
+    font-size: 44px;
+    color: var(--cream);
+    margin: 0;
+}
+
+.showcase-meta {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(224, 225, 221, 0.5);
+    margin: 0;
+}
+
+.showcase-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.showcase-featured {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background: var(--navy-deepest);
+    border: 1px solid rgba(119, 141, 169, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+a.showcase-featured:hover {
+    border-color: var(--blue-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.showcase-featured-placeholder {
+    cursor: default;
+}
+
+.showcase-featured-media {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.showcase-featured-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+.showcase-featured-media::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 27, 42, 0.55);
+    z-index: 1;
+}
+
+.showcase-featured-media-placeholder {
+    background-color: var(--navy-deepest);
+    background-image: repeating-linear-gradient(45deg, rgba(119, 141, 169, 0.16) 0px, rgba(119, 141, 169, 0.16) 2px, transparent 2px, transparent 14px);
+}
+
+.showcase-featured-media-placeholder::before {
+    display: none;
+}
+
+.showcase-featured-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue-accent);
+    white-space: nowrap;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.showcase-featured-info {
+    padding: 26px 28px 30px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.showcase-tag {
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue-accent);
+    margin-bottom: 8px;
+}
+
+.showcase-featured-info h3 {
+    font-family: var(--serif-display);
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--cream);
+    margin: 0 0 12px 0;
+}
+
+.showcase-featured-info p {
+    font-family: 'Futura Light', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(224, 225, 221, 0.7);
+    margin: 0;
+}
+
+.showcase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.showcase-item {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    text-decoration: none;
+    color: inherit;
+    background: var(--navy-deepest);
+    border: 1px solid rgba(119, 141, 169, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+a.showcase-item:hover {
+    border-color: var(--blue-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.showcase-item-placeholder {
+    cursor: default;
+}
+
+.showcase-item-media {
+    flex: 0 0 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-item-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+.showcase-item-media:not(.showcase-item-media-placeholder)::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 27, 42, 0.18);
+}
+
+.showcase-item-media-placeholder {
+    background-color: var(--navy-surface);
+    background-image: repeating-linear-gradient(45deg, rgba(119, 141, 169, 0.14) 0px, rgba(119, 141, 169, 0.14) 2px, transparent 2px, transparent 14px);
+}
+
+.showcase-item-info {
+    flex: 1;
+    min-width: 0;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.showcase-item-info h4 {
+    font-family: var(--serif-display);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--cream);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.showcase-arrow {
+    font-family: var(--mono);
+    color: var(--blue-accent);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.showcase-soon {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--blue-accent);
+    border: 1px solid rgba(119, 141, 169, 0.5);
+    border-radius: 20px;
+    padding: 2px 9px;
+    flex-shrink: 0;
+}
+
+.showcase-item-info p {
+    font-family: 'Futura Light', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(224, 225, 221, 0.6);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .showcase-body {
+        grid-template-columns: 1fr;
+    }
+    .showcase-featured-media {
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-showcase {
+        padding: 40px 20px 50px;
+    }
+    .showcase-title {
+        font-size: 32px;
+    }
+    .showcase-item {
+        flex-direction: column;
+    }
+    .showcase-item-media {
+        flex: 0 0 140px;
+        width: 100%;
+    }
 }
 
 /* Projects Grid Layout */
