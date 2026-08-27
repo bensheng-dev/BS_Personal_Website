@@ -1534,11 +1534,8 @@ code{
     }
 
     .btn-custom {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-        margin-top: 10px;
+        padding: 14px 30px;
+        font-size: 15px;
     }
 }
 
@@ -1671,11 +1668,9 @@ code{
     }
 
     .btn-custom {
-        width: 90%; /* Larger tap area */
         min-height: 44px;
-        padding: 14px;
-        font-size: 16px;
-        margin: 10px auto;
+        padding: 12px 18px;
+        font-size: 13px;
         -webkit-tap-highlight-color: transparent;
     }
 

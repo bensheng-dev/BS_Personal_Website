@@ -134,31 +134,5 @@
             </div>
         </div>
     </footer>
-<script>
-window.addEventListener("load", function(){
-  function w(sel){ var e=document.querySelector(sel); return e? e.scrollWidth : "NA"; }
-  var lines = [
-    "innerW:"+window.innerWidth,
-    "html:"+document.documentElement.scrollWidth,
-    "body:"+document.body.scrollWidth,
-    "header:"+w("header"),
-    "btn-custom:"+w(".btn-custom"),
-    "nav-menu:"+w(".nav-menu"),
-    "main:"+w("main"),
-    "intro:"+w(".intro"),
-    "container:"+w(".intro .container"),
-    "eyebrow:"+w(".eyebrow"),
-    "h1:"+w(".intro h1"),
-    "p:"+w(".intro p"),
-    "hero-actions:"+w(".hero-actions"),
-    "skills-row:"+w(".skills-row"),
-    "carousel-skills:"+w(".carousel-skills"),
-    "projects-grid:"+w(".projects-grid")
-  ];
-  var d = document.createElement("div");
-  d.style.cssText="position:fixed;top:0;left:0;right:0;background:red;color:white;z-index:99999;font-size:12px;font-family:monospace;padding:6px;line-height:1.4;word-break:break-all;";
-  d.innerHTML = lines.join("<br>");
-  document.body.appendChild(d);
-});
-</script></body>
+</body>
 </html>
