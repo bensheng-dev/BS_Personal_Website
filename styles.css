@@ -81,7 +81,7 @@ header {
     padding-right: max(35px, env(safe-area-inset-right));
     position: sticky;
     top: 0;
-    z-index: 500;
+    z-index: 1200;
 }
 
 main {
@@ -2197,6 +2197,11 @@ code{
     color: var(--cream);
     margin: 0 0 20px 0;
     text-align: left;
+}
+
+.project-placeholder-note {
+    font-style: italic;
+    color: rgba(224, 225, 221, 0.55) !important;
 }
 
 .project-section-images {

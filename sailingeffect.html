@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Benjamin Sheng Portfolio</title>
+    <!-- Preload Futura Light font to prevent flicker -->
+    <link rel="preload" href="fonts/Futura-Light.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to your CSS file here if you have one -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="carousel.js"></script>
+    <script src="projects-carousel.js"></script>
+    <script src="menu.js"></script>
+</head>
+<body>
+    <header>
+        <a class="btn-custom" href = "index.html">Benjamin Sheng</a>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="blogs.html">Aero Blog</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class = "intro intro-reverse">
+            <div class="container">
+                <h1>The Sailing Effect</h1>
+                <p class="project-subtitle">Skills: [Add skills used]</p>
+                <p class="project-date">[Add project dates]</p>
+
+                <p class="project-description">[Write a short introduction to the project here &mdash; what it is, and what problem it explores.]</p>
+            </div>
+            <img src="images/SailingEffectCover.jpg" alt="The Sailing Effect">
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-text">
+                    <h2>Overview</h2>
+                    <p class="project-placeholder-note">[Write about the concept, goals, and approach behind this project here.]</p>
+                    <p class="project-placeholder-note">[Add more detail, methods, or results here.]</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="project-navigation">
+            <a href="f1simrig.html" class="nav-link prev-project">Previous Project</a>
+            <a href="windtunnel.html" class="nav-link next-project">Next Project</a>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Benjamin Sheng</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/benjamin-sheng-6bab27316/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                    <img src="images/Linkedin.png" alt="LinkedIn" class="social-icon-img">
+                </a>
+                <a href="https://www.instagram.com/ben_sheng10/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                    <img src="images/Instagram.png" alt="Instagram" class="social-icon-img">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
