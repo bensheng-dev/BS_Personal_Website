@@ -2371,6 +2371,21 @@ code{
     color: rgba(224, 225, 221, 0.55) !important;
 }
 
+.project-section-single-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+    .project-section-single-image {
+        max-width: 100%;
+    }
+}
+
 .project-section-images {
     flex: 1;
     display: grid;
