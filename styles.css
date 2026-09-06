@@ -1189,7 +1189,7 @@ a.showcase-featured:hover {
     inset: 0;
 }
 
-.showcase-featured-media::before {
+.showcase-featured-media:has(.showcase-featured-caption):not(.showcase-featured-media-placeholder)::before {
     content: '';
     position: absolute;
     inset: 0;
