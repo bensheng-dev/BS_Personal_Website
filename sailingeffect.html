@@ -85,6 +85,127 @@
             </div>
         </section>
 
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-text">
+                    <h2>CAD Methodology</h2>
+                    <p>The base of this project is UBC Solar's EP9 catamaran model &mdash; a 1.88m by 4.88m twin-hull aeroshell with the driver's canopy on the starboard hull and the battery pack on the portside hull. To isolate the sailing effect, I added vertical airfoils directly onto the existing model with no mechanisms or sub-system integration.</p>
+                    <p>Taking inspiration from the Nuna 13S's retractable sail, I matched its shape in JavaFoil to generate airfoil coordinates, then lofted two sketches at different planes in SolidWorks to build the sail as a solid body. The top was cut to match the canopy's tail contour so it could sit flush against it, resulting in a 20-inch-tall canopy sail.</p>
+                    <p>I also modeled a second, 40-inch sail on the port side of the car &mdash; mirroring Nuna 13S's dual-sail layout &mdash; to test a two-sail configuration in CFD.</p>
+                </div>
+            </div>
+            <div class="project-section-images-full-width flow-results-four-with-captions">
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CAD_EP9_Isometric.png" alt="Isometric view of the EP9 base model">
+                    <figcaption class="flow-result-four-caption">Isometric view of the EP9 base model</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CAD_EP9_Front.png" alt="Front view of the EP9 base model">
+                    <figcaption class="flow-result-four-caption">Front view of the EP9 base model</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CAD_EP9_CanopySail.png" alt="EP9 with the canopy sail added">
+                    <figcaption class="flow-result-four-caption">EP9 with the 20-inch canopy sail added</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CAD_EP9_TwoSails.png" alt="EP9 with both sails added">
+                    <figcaption class="flow-result-four-caption">EP9 with both the canopy and port-side sail</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-text">
+                    <h2>CFD Methodology</h2>
+                    <p>All simulations ran in Simcenter StarCCM+, split into 2D airfoil sweeps and full 3D car simulations.</p>
+                    <p>For the 2D cases, each airfoil was extruded 0.1m into a domain 20m behind, 10m in front, and 10m to each side (extended to 20m on the windward side for crosswind cases). A polygonal mesh with a 0.1m base size, 30 prism layers, and 45&deg;-angled wake refinement produced a 45,882-cell mesh &mdash; light enough to run 1,000+ iterations across multiple angles of attack (10&deg;, 20&deg;, 30&deg;) with a K-Omega turbulence model.</p>
+                    <p>For the 3D car simulations, the domain extended 12m windward, 25m leeward, and 5m tall, with a nested 12m &times; 12m volumetric control block refining the wake. A polyhedral mesh with 25 prism layers produced roughly 14 million cells. A segregated solver diverged under the combined 80kph forward speed and 60kph crosswind, so I switched to a coupled solver to keep the simulation stable.</p>
+                    <p class="project-placeholder-note">These results haven't been validated against real-world data, and hardware limits capped the mesh resolution &mdash; a finer mesh would take days to solve, so there's a real accuracy-vs-practicality tradeoff behind every number in this report.</p>
+                </div>
+            </div>
+            <div class="project-section-images-full-width flow-results-four-with-captions">
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CFD_2D_Domain.png" alt="Domain sizing for the 2D airfoil simulations">
+                    <figcaption class="flow-result-four-caption">Domain sizing for the 2D airfoil simulations</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CFD_2D_Mesh.png" alt="2D mesh on the NACA10320 airfoil">
+                    <figcaption class="flow-result-four-caption">2D mesh on the NACA10320 airfoil (45,882 cells)</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CFD_3D_CarMesh.png" alt="3D surface mesh on the EP9 car body">
+                    <figcaption class="flow-result-four-caption">3D surface mesh on the EP9 car body</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/CFD_InitializedSim.png" alt="Initialized 3D crosswind simulation">
+                    <figcaption class="flow-result-four-caption">Initialized 3D crosswind simulation</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-section-content">
+                <div class="project-section-text">
+                    <h2>Sail Analysis</h2>
+                    <p>I ran five simulations in total: 2D sweeps on NACA10320 and Clark Y airfoils, then 3D runs on the bare EP9 control case, a single canopy-side sail, and a two-sail configuration.</p>
+                    <p>The 2D sweep favored the NACA10320 &mdash; it kept generating lift steadily through 30&deg; (78.51 N vs. the Clark Y's 66.73 N), while the Clark Y appeared to stall between 20&deg; and 30&deg;, where its lift plateaued and drag suddenly collapsed.</p>
+                    <p>The bare EP9 control case produced 68.54 N of drag under a 60kph crosswind, dominated by skin friction rather than pressure. Adding a single canopy sail generated 155.24 N of lift, which converts to 35.27 N of thrust at a resolved 12.8&deg; angle &mdash; bringing the car's net system drag down to just 2.3 N.</p>
+                    <p>With two sails installed, the battery-side sail (305.02 N lift &rarr; 69.30 N thrust) and canopy-side sail (157.2 N lift &rarr; 35.71 N thrust) combined for a net 97.56 N of forward thrust &mdash; meaning the sails generated more forward force than the total drag of the car and sails combined.</p>
+                </div>
+            </div>
+            <div class="report-table-wrapper">
+                <table class="report-table">
+                    <thead>
+                        <tr>
+                            <th>Configuration</th>
+                            <th>Car Drag (N)</th>
+                            <th>Sail Thrust (N)</th>
+                            <th>Net Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Control (no sail)</td>
+                            <td>68.54</td>
+                            <td>&mdash;</td>
+                            <td>68.54 N drag</td>
+                        </tr>
+                        <tr>
+                            <td>Canopy sail</td>
+                            <td>54.82</td>
+                            <td>35.27</td>
+                            <td>2.3 N drag</td>
+                        </tr>
+                        <tr>
+                            <td>Two sails</td>
+                            <td>58.59</td>
+                            <td>105.01</td>
+                            <td>97.56 N thrust</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="project-section-images-full-width flow-results-four-with-captions">
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/Sail_ControlVectorField.png" alt="Velocity vector field around the bare EP9 control case">
+                    <figcaption class="flow-result-four-caption">Velocity vector field &mdash; control case</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/Sail_ControlPressureGradient.png" alt="EP9 pressure gradient, control case">
+                    <figcaption class="flow-result-four-caption">Pressure gradient &mdash; control case</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/Sail_CanopySailVectorField.png" alt="Velocity vector field around the canopy sail">
+                    <figcaption class="flow-result-four-caption">Velocity vector field &mdash; canopy sail</figcaption>
+                </figure>
+                <figure class="flow-result-four-item">
+                    <img src="sailingeffect/Sail_TwoSailVectorField.png" alt="Velocity vector field with both sails installed">
+                    <figcaption class="flow-result-four-caption">Velocity vector field &mdash; two sails</figcaption>
+                </figure>
+            </div>
+        </section>
+
         <nav class="project-navigation">
             <a href="f1simrig.html" class="nav-link prev-project">Previous Project</a>
             <a href="windtunnel.html" class="nav-link next-project">Next Project</a>
