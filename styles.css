@@ -2386,6 +2386,35 @@ code{
     }
 }
 
+/* Sailing effect methodology sections: give photos more of the row than the default 50/50 split */
+.sailing-photo-row.project-section-content {
+    align-items: center;
+}
+
+.sailing-photo-row .project-section-text {
+    flex: 0 1 400px;
+    max-width: 400px;
+    margin-top: 0;
+}
+
+.sailing-photo-row .project-section-images {
+    flex: 1 1 auto;
+    max-width: none;
+    gap: 14px;
+}
+
+.sailing-photo-row .project-section-single-image {
+    flex: 1 1 auto;
+    max-width: 620px;
+}
+
+@media (max-width: 1024px) {
+    .sailing-photo-row .project-section-text {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+}
+
 .project-section-images {
     flex: 1;
     display: grid;
