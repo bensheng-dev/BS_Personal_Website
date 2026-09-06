@@ -2389,6 +2389,7 @@ code{
 /* Sailing effect methodology sections: give photos more of the row than the default 50/50 split */
 .sailing-photo-row.project-section-content {
     align-items: center;
+    gap: 30px;
 }
 
 .sailing-photo-row .project-section-text {
@@ -2399,13 +2400,13 @@ code{
 
 .sailing-photo-row .project-section-images {
     flex: 1 1 auto;
-    max-width: none;
-    gap: 14px;
+    max-width: 560px;
+    gap: 10px;
 }
 
 .sailing-photo-row .project-section-single-image {
     flex: 1 1 auto;
-    max-width: 620px;
+    max-width: 520px;
 }
 
 @media (max-width: 1024px) {
